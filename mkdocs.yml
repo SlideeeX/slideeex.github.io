@@ -1,3 +1,11 @@
 site_name: Документация Guic
+site_dir: guic
 theme:
   name: material
+nav:
+  - Home: index.md
+  - IAddable:
+    - Обзор: iaddable.md
+    - Element:
+      - Обзор: element.md
+      - Interface: interface.md
