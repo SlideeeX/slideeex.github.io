@@ -1,0 +1,50 @@
+/* Кнопки-переходы ("Давайте начнём", "Следующий шаг"): примерно на 18% меньше стандартных Material */
+.md-typeset .md-button {
+  font-size: 0.66rem;
+  padding: 0.5em 1.65em;
+}
+
+/* Зелёная плашка-статус, например: <span class="green-stable">stable</span> */
+.green-stable {
+  display: inline-block;
+  padding: 0.1em 0.75em;
+  border-radius: 999px;
+  background-color: #83c787;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Жёлтая плашка-статус, например: <span class="yellow-stable">beta</span> */
+.yellow-stable {
+  display: inline-block;
+  padding: 0.1em 0.75em;
+  border-radius: 999px;
+  background-color: #b3ae36;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Красная плашка-статус, например: <span class="red-stable">unstable</span> */
+.red-stable {
+  display: inline-block;
+  padding: 0.1em 0.75em;
+  border-radius: 999px;
+  background-color: #941010;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
