@@ -1,11 +1,82 @@
-site_name: Документация Guic
-site_dir: guic
+site_name: Guic documentation
+site_url: https://slideeex.github.io/Guic/en/
+site_dir: site/Guic/en
+docs_dir: docs/en
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.expand
+extra_css:
+  - stylesheets/extra.css
+extra:
+  alternate:
+    - name: English
+      link: /Guic/en/
+      lang: en
+    - name: Русский
+      link: /Guic/ru/
+      lang: ru
+markdown_extensions:
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.superfences
 nav:
   - Home: index.md
-  - IAddable:
-    - Обзор: iaddable.md
-    - Element:
-      - Обзор: element.md
-      - Interface: interface.md
+  - Let's get it started:
+    - Installation: start/installation.md
+    - Creating a window: start/creating_window.md
+    - Drawing an image: start/drawing_image.md
+    - Drawing text: start/drawing_text.md
+    - Handling events: start/handling_events.md
+    - Structuring: start/structuring.md
+    - Custom element: start/custom_element.md
+    # - Creating a resource: start/creating_resource.md
+    # - Creating an event: start/creating_event.md
+    - Common mistakes: start/common_mistakes.md
+  - Public API:
+    - Label explanation: stability.md
+    - Elements:
+      - Element: element.md
+      - Sprite: sprite.md
+      - Text: text.md
+      - Trigger: trigger.md
+      - Container: container.md
+      - Composite: composite.md
+    - General:
+      - Window: window.md
+      - Clock: clock.md
+      - Key: key.md
+    - Resources:
+      - Image: image.md
+      - Font: font.md
+    - Primitives:
+      - Position: position.md
+      - Size: size.md
+      - Rect: rect.md
+      - Event: event.md
+      - Color: color.md
+    - Configuration:
+      - Data types: types.md
+      - Functions: functions.md
+    - Engine:
+      - Bit512: bit512.md
+      - Bitmap: bitmap.md
+      - EngineWindow: engine_window.md
+      - Glyph: glyph.md
+      - GlyphEntry: glyphEntry.md
+      - KeyCode: keycode.md
+      - Keys: keys.md
+      - Renderer: renderer.md
+      - Resource: resource.md
+      - Vertex: vertex.md

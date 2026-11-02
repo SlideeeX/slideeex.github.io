@@ -1,0 +1,83 @@
+site_name: Документация Guic
+site_url: https://slideeex.github.io/Guic/ru/
+site_dir: site/Guic/ru
+docs_dir: docs/ru
+theme:
+  name: material
+  language: ru
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.expand
+extra_css:
+  - stylesheets/extra.css
+extra:
+  alternate:
+    - name: English
+      link: /Guic/en/
+      lang: en
+    - name: Русский
+      link: /Guic/ru/
+      lang: ru
+markdown_extensions:
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.superfences
+nav:
+  - Guic: index.md
+  - Давайте начнём:
+    - Установка: start/installation.md
+    - Создание окна: start/creating_window.md
+    - Вывод картинки: start/drawing_image.md
+    - Вывод текста: start/drawing_text.md
+    - Обработка событий: start/handling_events.md
+    - Структурирование: start/structuring.md
+    - Свой элемент: start/custom_element.md
+    # - Создание ресурса: start/creating_resource.md
+    # - Создание события: start/creating_event.md
+    - Чего делать не стоит: start/common_mistakes.md
+  - Публичный API:
+    - Пояснение к меткам: stability.md
+    - Элементы:
+      - Element: element.md
+      - Sprite: sprite.md
+      - Text: text.md
+      - Trigger: trigger.md
+      - Container: container.md
+      - Composite: composite.md
+    - Общее:
+      - Window: window.md
+      - Clock: clock.md
+      - Key: key.md
+    - Ресурсы:
+      - Image: image.md
+      - Font: font.md
+    - Примитивы:
+      - Position: position.md
+      - Size: size.md
+      - Rect: rect.md
+      - Event: event.md
+      - Color: color.md
+    - Конфигурация:
+      - Типы данных: types.md
+      - Функции: functions.md
+    - Движок:
+      - Bit512: bit512.md
+      - Bitmap: bitmap.md
+      - EngineWindow: engine_window.md
+      - Glyph: glyph.md
+      - GlyphEntry: glyphEntry.md
+      - KeyCode: keycode.md
+      - Keys: keys.md
+      - Renderer: renderer.md
+      - Resource: resource.md
+      - Vertex: vertex.md
