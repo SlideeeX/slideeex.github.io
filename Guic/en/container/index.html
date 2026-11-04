@@ -1980,8 +1980,8 @@
 <p>A container element – holds child elements and passes events and drawing to them. Added elements are bound to the Container, so a strict hierarchy applies – any element belongs to only one parent.</p>
 <h2 id="constructors">Constructors</h2>
 <ul>
-<li><code>Container()</code> - Default constructor for creating a container</li>
-<li><code>Container(Rect rect)</code> - Constructor for creating a container with the given rectangle</li>
+<li><code>Container()</code> - Default constructor for creating a container <span class="yellow-stable">beta</span></li>
+<li><code>Container(Rect rect)</code> - Constructor for creating a container with the given rectangle <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="public-methods">Public methods</h2>
 <table>
@@ -2022,7 +2022,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Sets the container's position and size</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2040,7 +2040,7 @@
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Returns the area that needs to be redrawn</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2058,13 +2058,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Draws the child elements through the renderer</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the topmost child element hit at point (x, y), or <code>nullptr</code></td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 </tbody>
 </table>
@@ -2151,25 +2151,25 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Returns the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Returns the element's rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Returns the visible part of the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Returns the visible part of the rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2206,19 +2206,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Resets the changed flag and <code>oldRect</code> after drawing</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>The element's rectangle (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>The element's rectangle before the first change (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

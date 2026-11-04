@@ -1936,8 +1936,8 @@
 <p>Базовый класс всех графических элементов - хранит позицию, размер, слой, видимость и родителя</p>
 <h2 id="_1">Конструкторы</h2>
 <ul>
-<li><code>Element()</code> - Базовый конструктор элемента</li>
-<li><code>Element(const Element&amp;)</code> - Копирование запрещено</li>
+<li><code>Element()</code> - Базовый конструктор элемента <span class="yellow-stable">beta</span></li>
+<li><code>Element(const Element&amp;)</code> - Копирование запрещено <span class="yellow-stable">beta</span></li>
 <li><code>Element&amp; operator=(const Element&amp;)</code> - Присваивание запрещено</li>
 </ul>
 <h2 id="_2">Публичные методы</h2>
@@ -2021,7 +2021,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Устанавливает позицию и размер элемента (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2039,31 +2039,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Возвращает прямоугольник элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Возвращает прямоугольник элемента в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Возвращает область, которую нужно перерисовать (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2087,13 +2087,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Рисует элемент через рендерер (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Возвращает элемент, попавший в точку (x, y) (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2130,19 +2130,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Сбрасывает признак изменения и <code>oldRect</code> после отрисовки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>Прямоугольник элемента (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>Прямоугольник элемента до первого изменения (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

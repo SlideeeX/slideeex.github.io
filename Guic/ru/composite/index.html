@@ -1980,8 +1980,8 @@
 <p>Класс является интерфейсом для создания составных элементов - объединяет элементы в один объект для ручного (adobt/release) или автоматического (add/remove) управления</p>
 <h2 id="_1">Конструкторы</h2>
 <ul>
-<li><code>Composite()</code> - Базовый конструктор для создания составного элемента</li>
-<li><code>Composite(Rect rect)</code> - Конструктор для создания составного элемента с заданным прямоугольником</li>
+<li><code>Composite()</code> - Базовый конструктор для создания составного элемента <span class="yellow-stable">beta</span></li>
+<li><code>Composite(Rect rect)</code> - Конструктор для создания составного элемента с заданным прямоугольником <span class="yellow-stable">beta</span></li>
 <li><code>~Composite()</code> - Отсоединяет и удаляет внутренний контейнер <span class="green-stable">stable</span></li>
 </ul>
 <h2 id="_2">Публичные методы</h2>
@@ -1999,7 +1999,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Устанавливает позицию и размер элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2017,7 +2017,7 @@
 <td>void</td>
 <td>draw</td>
 <td>Рисует составной элемент через рендерер</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2035,13 +2035,13 @@
 <td>Element*</td>
 <td>hit</td>
 <td>Возвращает элемент, попавший в точку (x, y)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Возвращает область, которую нужно перерисовать</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>
@@ -2169,25 +2169,25 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Возвращает прямоугольник элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Возвращает прямоугольник элемента в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2224,19 +2224,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Сбрасывает признак изменения и <code>oldRect</code> после отрисовки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>Прямоугольник элемента (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>Прямоугольник элемента до первого изменения (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>
