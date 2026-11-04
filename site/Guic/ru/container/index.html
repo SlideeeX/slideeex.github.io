@@ -1980,8 +1980,8 @@
 <p>Класс является элементом-контейнером - хранит дочерние элементы и передаёт им события и отрисовку. Добавляемые элементы привязываются к Container, поэтому действует строгая иерархия - любой элемент предназначен только для одного родителя.</p>
 <h2 id="_1">Конструкторы</h2>
 <ul>
-<li><code>Container()</code> - Базовый конструктор для создания контейнера</li>
-<li><code>Container(Rect rect)</code> - Конструктор для создания контейнера с заданным прямоугольником</li>
+<li><code>Container()</code> - Базовый конструктор для создания контейнера <span class="yellow-stable">beta</span></li>
+<li><code>Container(Rect rect)</code> - Конструктор для создания контейнера с заданным прямоугольником <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="_2">Публичные методы</h2>
 <table>
@@ -2022,7 +2022,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Устанавливает позицию и размер контейнера</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2040,7 +2040,7 @@
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Возвращает область, которую нужно перерисовать</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2058,13 +2058,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Рисует дочерние элементы через рендерер</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Возвращает верхний дочерний элемент, попавший в точку (x, y), или <code>nullptr</code></td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 </tbody>
 </table>
@@ -2151,25 +2151,25 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Возвращает прямоугольник элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Возвращает прямоугольник элемента в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2206,19 +2206,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Сбрасывает признак изменения и <code>oldRect</code> после отрисовки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>Прямоугольник элемента (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>Прямоугольник элемента до первого изменения (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

@@ -1980,8 +1980,8 @@
 <p>A class representing an event handler – runs a callback when a condition is met, or when keys and mouse buttons are pressed</p>
 <h2 id="constructors">Constructors</h2>
 <ul>
-<li><code>Trigger()</code> - Default constructor for creating a trigger</li>
-<li><code>Trigger(Rect rect)</code> - Constructor for creating a trigger with the given rectangle</li>
+<li><code>Trigger()</code> - Default constructor for creating a trigger <span class="yellow-stable">beta</span></li>
+<li><code>Trigger(Rect rect)</code> - Constructor for creating a trigger with the given rectangle <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="public-methods">Public methods</h2>
 <table>
@@ -2058,25 +2058,25 @@
 <td>void</td>
 <td>setRadius</td>
 <td>Sets the corner radius of the activation area (negative values are treated as 0)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>int</td>
 <td>getRadius</td>
 <td>Returns the corner radius of the activation area</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the trigger if the point (x, y) falls into its area taking the radius into account, otherwise <code>nullptr</code>. With radius 0 it works as the base <code>Element::hit</code></td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Always returns an empty rectangle (the trigger does not need redrawing)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>
@@ -2163,7 +2163,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Sets the element's position and size (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2181,31 +2181,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Returns the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Returns the element's rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Returns the visible part of the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Returns the visible part of the rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Returns the area that needs to be redrawn (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2223,13 +2223,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Draws the element through the renderer (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the element that contains the point (x, y) (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2266,19 +2266,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Resets the change flag and <code>oldRect</code> after drawing</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>The element's rectangle (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>The element's rectangle before the first change (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

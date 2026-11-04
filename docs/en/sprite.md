@@ -3,10 +3,10 @@ A class representing a sprite – a rectangle filled with a color or an image, w
 
 ## Constructors
 
-* `Sprite()` - Default constructor for creating a sprite
-* `Sprite(Rect rect)` - Constructor for creating a sprite with the given rectangle
-* `Sprite(Rect rect, Image& image)` - Constructor for creating a sprite with the given rectangle and image
-* `Sprite(Rect rect, Color color)` - Constructor for creating a sprite with the given rectangle and color
+* `Sprite()` - Default constructor for creating a sprite <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect)` - Constructor for creating a sprite with the given rectangle <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect, Image& image)` - Constructor for creating a sprite with the given rectangle and image <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect, Color color)` - Constructor for creating a sprite with the given rectangle and color <span class="yellow-stable">beta</span>
 
 ## Enumeration Mode - sprite fill modes
 
@@ -25,21 +25,21 @@ A class representing a sprite – a rectangle filled with a color or an image, w
 |void|setImageRect|Sets the area of the image that will be shown|<span class="green-stable">stable</span>|
 |void|setColor|Sets the sprite's color and switches the sprite to the `Color` mode. In the `Mashup` mode the mode does not change, and the color tints the image|<span class="green-stable">stable</span>|
 |Color|getColor|Returns the sprite's color|<span class="green-stable">stable</span>|
-|void|setRadius|Sets the corner rounding radius|<span class="green-stable">stable</span>|
-|int|getRadius|Returns the corner rounding radius|<span class="green-stable">stable</span>|
-|void|setMode|Sets the fill mode|<span class="green-stable">stable</span>|
-|Mode|getMode|Returns the fill mode|<span class="green-stable">stable</span>|
+|void|setRadius|Sets the corner rounding radius|<span class="yellow-stable">beta</span>|
+|int|getRadius|Returns the corner rounding radius|<span class="yellow-stable">beta</span>|
+|void|setMode|Sets the fill mode|<span class="yellow-stable">beta</span>|
+|Mode|getMode|Returns the fill mode|<span class="yellow-stable">beta</span>|
 |void|preload|Prepares the sprite's resources for the renderer|<span class="yellow-stable">beta</span>|
-|void|draw|Draws the sprite through the renderer|<span class="green-stable">stable</span>|
-|Element*|hit|Returns the element that contains the point (x, y)|<span class="green-stable">stable</span>|
+|void|draw|Draws the sprite through the renderer|<span class="yellow-stable">beta</span>|
+|Element*|hit|Returns the element that contains the point (x, y)|<span class="yellow-stable">beta</span>|
 
 ## Protected methods
 
 |Type|Method|Purpose|Label|
 |---|-----|----------|-----|
-|std::vector<engine::Vertex>|geometry|The sprite's geometry vertices (field)|<span class="green-stable">stable</span>|
-|void|buildGeometry|Builds the sprite's geometry|<span class="green-stable">stable</span>|
-|void|buildRoundedGeometry|Builds the sprite's geometry with rounded corners|<span class="green-stable">stable</span>|
+|std::vector<engine::Vertex>|geometry|The sprite's geometry vertices (field)|<span class="red-stable">unstable</span>|
+|void|buildGeometry|Builds the sprite's geometry|<span class="red-stable">unstable</span>|
+|void|buildRoundedGeometry|Builds the sprite's geometry with rounded corners|<span class="red-stable">unstable</span>|
 |Rect|imageRect|The area of the image that will be shown (field)|<span class="yellow-stable">beta</span>|
 |bool|calculateImageRect|Whether `imageRect` must be recalculated (field, default `true`)|<span class="yellow-stable">beta</span>|
 |static constexpr int|cornerSegments|Number of segments per rounded corner (field, `4`)|<span class="red-stable">unstable</span>|
@@ -60,14 +60,14 @@ A class representing a sprite – a rectangle filled with a color or an image, w
 |bool|isHit|Checks whether the element reacts to the cursor hitting it|<span class="green-stable">stable</span>|
 |void|setPosition|Sets the element's position (virtual)|<span class="green-stable">stable</span>|
 |void|setSize|Sets the element's size (virtual)|<span class="green-stable">stable</span>|
-|void|setRect|Sets the element's position and size (virtual)|<span class="green-stable">stable</span>|
+|void|setRect|Sets the element's position and size (virtual)|<span class="red-stable">unstable</span>|
 |Position|getPosition|Returns the element's position|<span class="green-stable">stable</span>|
 |Size|getSize|Returns the element's size|<span class="green-stable">stable</span>|
-|Rect|getRect|Returns the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Returns the area that needs to be redrawn (virtual)|<span class="green-stable">stable</span>|
+|Rect|getRect|Returns the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="red-stable">unstable</span>|
+|Rect|collectDirtyRect|Returns the area that needs to be redrawn (virtual)|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Returns the parent element|<span class="yellow-stable">beta</span>|
 |void|control|Handles an `Event` (virtual)|<span class="green-stable">stable</span>|
 |void|attachTo|Attaches the element to a parent|<span class="red-stable">unstable</span>|
@@ -78,6 +78,6 @@ A class representing a sprite – a rectangle filled with a color or an image, w
 
 |Type|Method|Purpose|Label|
 |---|-----|----------|-----|
-|void|unchange|Resets the change flag and `oldRect` after drawing|<span class="green-stable">stable</span>|
-|Rect|rect|The element's rectangle (field)|<span class="green-stable">stable</span>|
-|Rect|oldRect|The element's rectangle before the first change (field)|<span class="green-stable">stable</span>|
+|void|unchange|Resets the change flag and `oldRect` after drawing|<span class="yellow-stable">beta</span>|
+|Rect|rect|The element's rectangle (field)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|The element's rectangle before the first change (field)|<span class="red-stable">unstable</span>|

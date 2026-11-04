@@ -3,22 +3,22 @@
 
 ## Конструкторы
 
-* `Composite()` - Базовый конструктор для создания составного элемента
-* `Composite(Rect rect)` - Конструктор для создания составного элемента с заданным прямоугольником
+* `Composite()` - Базовый конструктор для создания составного элемента <span class="yellow-stable">beta</span>
+* `Composite(Rect rect)` - Конструктор для создания составного элемента с заданным прямоугольником <span class="yellow-stable">beta</span>
 * `~Composite()` - Отсоединяет и удаляет внутренний контейнер <span class="green-stable">stable</span>
 
 ## Публичные методы
 
 |Тип|Метод|Назначение|Метка|
 |---|-----|----------|-----|
-|void|setRect|Устанавливает позицию и размер элемента|<span class="green-stable">stable</span>|
+|void|setRect|Устанавливает позицию и размер элемента|<span class="red-stable">unstable</span>|
 |void|setPosition|Устанавливает позицию элемента|<span class="green-stable">stable</span>|
 |void|setSize|Устанавливает размер элемента|<span class="green-stable">stable</span>|
-|void|draw|Рисует составной элемент через рендерер|<span class="green-stable">stable</span>|
+|void|draw|Рисует составной элемент через рендерер|<span class="yellow-stable">beta</span>|
 |void|control|Обрабатывает событие|<span class="green-stable">stable</span>|
 |void|preload|Подготавливает ресурсы для рендерера|<span class="yellow-stable">beta</span>|
-|Element*|hit|Возвращает элемент, попавший в точку (x, y)|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать|<span class="green-stable">stable</span>|
+|Element*|hit|Возвращает элемент, попавший в точку (x, y)|<span class="yellow-stable">beta</span>|
+|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать|<span class="red-stable">unstable</span>|
 
 ## Защищённые методы
 
@@ -45,10 +45,10 @@
 |bool|isHit|Проверяет, реагирует ли элемент на попадание курсора|<span class="green-stable">stable</span>|
 |Position|getPosition|Возвращает позицию элемента|<span class="green-stable">stable</span>|
 |Size|getSize|Возвращает размер элемента|<span class="green-stable">stable</span>|
-|Rect|getRect|Возвращает прямоугольник элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="green-stable">stable</span>|
+|Rect|getRect|Возвращает прямоугольник элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Возвращает родительский элемент|<span class="yellow-stable">beta</span>|
 |void|attachTo|Прикрепляет элемент к родителю|<span class="red-stable">unstable</span>|
 |void|detach|Отсоединяет элемент от родителя|<span class="red-stable">unstable</span>|
@@ -57,6 +57,6 @@
 
 |Тип|Метод|Назначение|Метка|
 |---|-----|----------|-----|
-|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="green-stable">stable</span>|
-|Rect|rect|Прямоугольник элемента (поле)|<span class="green-stable">stable</span>|
-|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="green-stable">stable</span>|
+|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="yellow-stable">beta</span>|
+|Rect|rect|Прямоугольник элемента (поле)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="red-stable">unstable</span>|

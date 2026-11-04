@@ -2002,10 +2002,10 @@
 <p>Класс является представлением спрайта - прямоугольника, залитого цветом или изображением, с возможностью скругления углов</p>
 <h2 id="_1">Конструкторы</h2>
 <ul>
-<li><code>Sprite()</code> - Базовый конструктор для создания спрайта</li>
-<li><code>Sprite(Rect rect)</code> - Конструктор для создания спрайта с заданным прямоугольником</li>
-<li><code>Sprite(Rect rect, Image&amp; image)</code> - Конструктор для создания спрайта с заданным прямоугольником и изображением</li>
-<li><code>Sprite(Rect rect, Color color)</code> - Конструктор для создания спрайта с заданным прямоугольником и цветом</li>
+<li><code>Sprite()</code> - Базовый конструктор для создания спрайта <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect)</code> - Конструктор для создания спрайта с заданным прямоугольником <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect, Image&amp; image)</code> - Конструктор для создания спрайта с заданным прямоугольником и изображением <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect, Color color)</code> - Конструктор для создания спрайта с заданным прямоугольником и цветом <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="mode-">Перечисление Mode - режимы заливки спрайта</h2>
 <table>
@@ -2079,25 +2079,25 @@
 <td>void</td>
 <td>setRadius</td>
 <td>Устанавливает радиус скругления углов</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>int</td>
 <td>getRadius</td>
 <td>Возвращает радиус скругления углов</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>setMode</td>
 <td>Устанавливает режим заливки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Mode</td>
 <td>getMode</td>
 <td>Возвращает режим заливки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2109,13 +2109,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Рисует спрайт через рендерер</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Возвращает элемент, попавший в точку (x, y)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 </tbody>
 </table>
@@ -2134,19 +2134,19 @@
 <td>std::vector<engine::Vertex></td>
 <td>geometry</td>
 <td>Вершины геометрии спрайта (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>buildGeometry</td>
 <td>Строит геометрию спрайта</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>buildRoundedGeometry</td>
 <td>Строит геометрию спрайта со скруглёнными углами</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
@@ -2255,7 +2255,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Устанавливает позицию и размер элемента (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2273,31 +2273,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Возвращает прямоугольник элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Возвращает прямоугольник элемента в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника элемента</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Возвращает видимую часть прямоугольника в глобальных координатах</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Возвращает область, которую нужно перерисовать (виртуальный)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2346,19 +2346,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Сбрасывает признак изменения и <code>oldRect</code> после отрисовки</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>Прямоугольник элемента (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>Прямоугольник элемента до первого изменения (поле)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

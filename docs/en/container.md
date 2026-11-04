@@ -3,8 +3,8 @@ A container element – holds child elements and passes events and drawing to th
 
 ## Constructors
 
-* `Container()` - Default constructor for creating a container
-* `Container(Rect rect)` - Constructor for creating a container with the given rectangle
+* `Container()` - Default constructor for creating a container <span class="yellow-stable">beta</span>
+* `Container(Rect rect)` - Constructor for creating a container with the given rectangle <span class="yellow-stable">beta</span>
 
 ## Public methods
 
@@ -14,14 +14,14 @@ A container element – holds child elements and passes events and drawing to th
 |void|remove|Removes a child element|<span class="green-stable">stable</span>|
 |void|clear|Removes all child elements|<span class="green-stable">stable</span>|
 |void|detachChild|Detaches the child element `child` (takes a `const Element*`)|<span class="red-stable">unstable</span>|
-|void|setRect|Sets the container's position and size|<span class="green-stable">stable</span>|
+|void|setRect|Sets the container's position and size|<span class="red-stable">unstable</span>|
 |void|setPosition|Sets the container's position|<span class="green-stable">stable</span>|
 |void|setSize|Sets the container's size|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Returns the area that needs to be redrawn|<span class="green-stable">stable</span>|
+|Rect|collectDirtyRect|Returns the area that needs to be redrawn|<span class="red-stable">unstable</span>|
 |void|control|Passes an event to the child elements|<span class="green-stable">stable</span>|
 |void|preload|Prepares the child elements' resources for the renderer|<span class="yellow-stable">beta</span>|
-|void|draw|Draws the child elements through the renderer|<span class="green-stable">stable</span>|
-|Element*|hit|Returns the topmost child element hit at point (x, y), or `nullptr`|<span class="green-stable">stable</span>|
+|void|draw|Draws the child elements through the renderer|<span class="yellow-stable">beta</span>|
+|Element*|hit|Returns the topmost child element hit at point (x, y), or `nullptr`|<span class="yellow-stable">beta</span>|
 
 ## Protected methods
 
@@ -42,10 +42,10 @@ There are no protected methods or fields.
 |bool|isHit|Checks whether the element reacts to the cursor hitting it|<span class="green-stable">stable</span>|
 |Position|getPosition|Returns the element's position|<span class="green-stable">stable</span>|
 |Size|getSize|Returns the element's size|<span class="green-stable">stable</span>|
-|Rect|getRect|Returns the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="green-stable">stable</span>|
+|Rect|getRect|Returns the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Returns the parent element|<span class="yellow-stable">beta</span>|
 |void|attachTo|Attaches the element to a parent|<span class="red-stable">unstable</span>|
 |void|detach|Detaches the element from its parent|<span class="red-stable">unstable</span>|
@@ -54,6 +54,6 @@ There are no protected methods or fields.
 
 |Type|Method|Purpose|Label|
 |---|-----|----------|-----|
-|void|unchange|Resets the changed flag and `oldRect` after drawing|<span class="green-stable">stable</span>|
-|Rect|rect|The element's rectangle (field)|<span class="green-stable">stable</span>|
-|Rect|oldRect|The element's rectangle before the first change (field)|<span class="green-stable">stable</span>|
+|void|unchange|Resets the changed flag and `oldRect` after drawing|<span class="yellow-stable">beta</span>|
+|Rect|rect|The element's rectangle (field)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|The element's rectangle before the first change (field)|<span class="red-stable">unstable</span>|

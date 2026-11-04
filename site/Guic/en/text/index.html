@@ -1980,10 +1980,10 @@
 <p>A class representing text – draws a string in the given font and color</p>
 <h2 id="constructors">Constructors</h2>
 <ul>
-<li><code>Text()</code> - Default constructor for creating text</li>
-<li><code>Text(Rect rect)</code> - Constructor for creating text with the given rectangle</li>
-<li><code>Text(Rect rect, const std::string&amp; str)</code> - Constructor for creating text with the given rectangle and string</li>
-<li><code>Text(Rect rect, const std::string&amp; str, Font&amp; font)</code> - Constructor for creating text with the given rectangle, string and font</li>
+<li><code>Text()</code> - Default constructor for creating text <span class="yellow-stable">beta</span></li>
+<li><code>Text(Rect rect)</code> - Constructor for creating text with the given rectangle <span class="yellow-stable">beta</span></li>
+<li><code>Text(Rect rect, const std::string&amp; str)</code> - Constructor for creating text with the given rectangle and string <span class="yellow-stable">beta</span></li>
+<li><code>Text(Rect rect, const std::string&amp; str, Font&amp; font)</code> - Constructor for creating text with the given rectangle, string and font <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="public-methods">Public methods</h2>
 <table>
@@ -2042,7 +2042,7 @@
 <td>void</td>
 <td>draw</td>
 <td>Draws the text through the renderer</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 </tbody>
 </table>
@@ -2061,13 +2061,13 @@
 <td>void</td>
 <td>buildGeometry</td>
 <td>Builds the text's geometry</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>std::vector<engine::Vertex></td>
 <td>textGeometry</td>
 <td>The text's geometry vertices (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>
@@ -2152,7 +2152,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Sets the element's position and size (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2170,31 +2170,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Returns the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Returns the element's rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Returns the visible part of the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Returns the visible part of the rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Returns the area that needs to be redrawn (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2212,7 +2212,7 @@
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the element that contains the point (x, y) (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2249,19 +2249,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Resets the change flag and <code>oldRect</code> after drawing</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>The element's rectangle (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>The element's rectangle before the first change (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

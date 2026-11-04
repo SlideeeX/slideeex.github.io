@@ -1936,8 +1936,8 @@
 <p>The base class of all graphical elements – stores position, size, layer, visibility and parent</p>
 <h2 id="constructors">Constructors</h2>
 <ul>
-<li><code>Element()</code> - Default constructor of an element</li>
-<li><code>Element(const Element&amp;)</code> - Copying is forbidden</li>
+<li><code>Element()</code> - Default constructor of an element <span class="yellow-stable">beta</span></li>
+<li><code>Element(const Element&amp;)</code> - Copying is forbidden <span class="yellow-stable">beta</span></li>
 <li><code>Element&amp; operator=(const Element&amp;)</code> - Assignment is forbidden</li>
 </ul>
 <h2 id="public-methods">Public methods</h2>
@@ -2021,7 +2021,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Sets the element's position and size (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2039,31 +2039,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Returns the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Returns the element's rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Returns the visible part of the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Returns the visible part of the rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Returns the area that needs to be redrawn (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2087,13 +2087,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Draws the element through the renderer (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the element hit at point (x, y) (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2130,19 +2130,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Resets the changed flag and <code>oldRect</code> after drawing</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>The element's rectangle (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>The element's rectangle before the first change (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

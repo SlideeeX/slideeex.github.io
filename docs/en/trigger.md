@@ -3,8 +3,8 @@ A class representing an event handler – runs a callback when a condition is me
 
 ## Constructors
 
-* `Trigger()` - Default constructor for creating a trigger
-* `Trigger(Rect rect)` - Constructor for creating a trigger with the given rectangle
+* `Trigger()` - Default constructor for creating a trigger <span class="yellow-stable">beta</span>
+* `Trigger(Rect rect)` - Constructor for creating a trigger with the given rectangle <span class="yellow-stable">beta</span>
 
 ## Public methods
 
@@ -20,10 +20,10 @@ A class representing an event handler – runs a callback when a condition is me
 |void|onRMB|Sets a callback for releasing the right mouse button|<span class="green-stable">stable</span>|
 |void|onHover|Sets a callback `std::function<void(bool hovered)>`, which is called when the cursor's hover state over the trigger changes (taking the radius into account)|<span class="green-stable">stable</span>|
 |void|control|Handles an event and calls the callback if the condition is met|<span class="green-stable">stable</span>|
-|void|setRadius|Sets the corner radius of the activation area (negative values are treated as 0)|<span class="green-stable">stable</span>|
-|int|getRadius|Returns the corner radius of the activation area|<span class="green-stable">stable</span>|
-|Element*|hit|Returns the trigger if the point (x, y) falls into its area taking the radius into account, otherwise `nullptr`. With radius 0 it works as the base `Element::hit`|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Always returns an empty rectangle (the trigger does not need redrawing)|<span class="green-stable">stable</span>|
+|void|setRadius|Sets the corner radius of the activation area (negative values are treated as 0)|<span class="yellow-stable">beta</span>|
+|int|getRadius|Returns the corner radius of the activation area|<span class="yellow-stable">beta</span>|
+|Element*|hit|Returns the trigger if the point (x, y) falls into its area taking the radius into account, otherwise `nullptr`. With radius 0 it works as the base `Element::hit`|<span class="yellow-stable">beta</span>|
+|Rect|collectDirtyRect|Always returns an empty rectangle (the trigger does not need redrawing)|<span class="red-stable">unstable</span>|
 
 ## Protected methods
 
@@ -44,18 +44,18 @@ There are no protected methods or fields.
 |bool|isHit|Checks whether the element reacts to the cursor hitting it|<span class="green-stable">stable</span>|
 |void|setPosition|Sets the element's position (virtual)|<span class="green-stable">stable</span>|
 |void|setSize|Sets the element's size (virtual)|<span class="green-stable">stable</span>|
-|void|setRect|Sets the element's position and size (virtual)|<span class="green-stable">stable</span>|
+|void|setRect|Sets the element's position and size (virtual)|<span class="red-stable">unstable</span>|
 |Position|getPosition|Returns the element's position|<span class="green-stable">stable</span>|
 |Size|getSize|Returns the element's size|<span class="green-stable">stable</span>|
-|Rect|getRect|Returns the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Returns the area that needs to be redrawn (virtual)|<span class="green-stable">stable</span>|
+|Rect|getRect|Returns the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Returns the element's rectangle in global coordinates|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Returns the visible part of the element's rectangle|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Returns the visible part of the rectangle in global coordinates|<span class="red-stable">unstable</span>|
+|Rect|collectDirtyRect|Returns the area that needs to be redrawn (virtual)|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Returns the parent element|<span class="yellow-stable">beta</span>|
 |void|preload|Prepares the element's resources for the renderer (virtual)|<span class="yellow-stable">beta</span>|
-|void|draw|Draws the element through the renderer (virtual)|<span class="green-stable">stable</span>|
-|Element*|hit|Returns the element that contains the point (x, y) (virtual)|<span class="green-stable">stable</span>|
+|void|draw|Draws the element through the renderer (virtual)|<span class="yellow-stable">beta</span>|
+|Element*|hit|Returns the element that contains the point (x, y) (virtual)|<span class="yellow-stable">beta</span>|
 |void|attachTo|Attaches the element to a parent|<span class="red-stable">unstable</span>|
 |void|detach|Detaches the element from its parent|<span class="red-stable">unstable</span>|
 |void|detachChild|Detaches a child element (virtual)|<span class="red-stable">unstable</span>|
@@ -64,6 +64,6 @@ There are no protected methods or fields.
 
 |Type|Method|Purpose|Label|
 |---|-----|----------|-----|
-|void|unchange|Resets the change flag and `oldRect` after drawing|<span class="green-stable">stable</span>|
-|Rect|rect|The element's rectangle (field)|<span class="green-stable">stable</span>|
-|Rect|oldRect|The element's rectangle before the first change (field)|<span class="green-stable">stable</span>|
+|void|unchange|Resets the change flag and `oldRect` after drawing|<span class="yellow-stable">beta</span>|
+|Rect|rect|The element's rectangle (field)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|The element's rectangle before the first change (field)|<span class="red-stable">unstable</span>|

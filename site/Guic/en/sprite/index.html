@@ -2002,10 +2002,10 @@
 <p>A class representing a sprite – a rectangle filled with a color or an image, with optionally rounded corners</p>
 <h2 id="constructors">Constructors</h2>
 <ul>
-<li><code>Sprite()</code> - Default constructor for creating a sprite</li>
-<li><code>Sprite(Rect rect)</code> - Constructor for creating a sprite with the given rectangle</li>
-<li><code>Sprite(Rect rect, Image&amp; image)</code> - Constructor for creating a sprite with the given rectangle and image</li>
-<li><code>Sprite(Rect rect, Color color)</code> - Constructor for creating a sprite with the given rectangle and color</li>
+<li><code>Sprite()</code> - Default constructor for creating a sprite <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect)</code> - Constructor for creating a sprite with the given rectangle <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect, Image&amp; image)</code> - Constructor for creating a sprite with the given rectangle and image <span class="yellow-stable">beta</span></li>
+<li><code>Sprite(Rect rect, Color color)</code> - Constructor for creating a sprite with the given rectangle and color <span class="yellow-stable">beta</span></li>
 </ul>
 <h2 id="enumeration-mode-sprite-fill-modes">Enumeration Mode - sprite fill modes</h2>
 <table>
@@ -2079,25 +2079,25 @@
 <td>void</td>
 <td>setRadius</td>
 <td>Sets the corner rounding radius</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>int</td>
 <td>getRadius</td>
 <td>Returns the corner rounding radius</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>setMode</td>
 <td>Sets the fill mode</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Mode</td>
 <td>getMode</td>
 <td>Returns the fill mode</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>void</td>
@@ -2109,13 +2109,13 @@
 <td>void</td>
 <td>draw</td>
 <td>Draws the sprite through the renderer</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Element*</td>
 <td>hit</td>
 <td>Returns the element that contains the point (x, y)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 </tbody>
 </table>
@@ -2134,19 +2134,19 @@
 <td>std::vector<engine::Vertex></td>
 <td>geometry</td>
 <td>The sprite's geometry vertices (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>buildGeometry</td>
 <td>Builds the sprite's geometry</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>void</td>
 <td>buildRoundedGeometry</td>
 <td>Builds the sprite's geometry with rounded corners</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
@@ -2255,7 +2255,7 @@
 <td>void</td>
 <td>setRect</td>
 <td>Sets the element's position and size (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Position</td>
@@ -2273,31 +2273,31 @@
 <td>Rect</td>
 <td>getRect</td>
 <td>Returns the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalRect</td>
 <td>Returns the element's rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getVisibleRect</td>
 <td>Returns the visible part of the element's rectangle</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>getGlobalVisibleRect</td>
 <td>Returns the visible part of the rectangle in global coordinates</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>collectDirtyRect</td>
 <td>Returns the area that needs to be redrawn (virtual)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>const Element*</td>
@@ -2346,19 +2346,19 @@
 <td>void</td>
 <td>unchange</td>
 <td>Resets the change flag and <code>oldRect</code> after drawing</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="yellow-stable">beta</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>rect</td>
 <td>The element's rectangle (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 <tr>
 <td>Rect</td>
 <td>oldRect</td>
 <td>The element's rectangle before the first change (field)</td>
-<td><span class="green-stable">stable</span></td>
+<td><span class="red-stable">unstable</span></td>
 </tr>
 </tbody>
 </table>

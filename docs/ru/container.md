@@ -3,8 +3,8 @@
 
 ## Конструкторы
 
-* `Container()` - Базовый конструктор для создания контейнера
-* `Container(Rect rect)` - Конструктор для создания контейнера с заданным прямоугольником
+* `Container()` - Базовый конструктор для создания контейнера <span class="yellow-stable">beta</span>
+* `Container(Rect rect)` - Конструктор для создания контейнера с заданным прямоугольником <span class="yellow-stable">beta</span>
 
 ## Публичные методы
 
@@ -14,14 +14,14 @@
 |void|remove|Удаляет дочерний элемент|<span class="green-stable">stable</span>|
 |void|clear|Удаляет все дочерние элементы|<span class="green-stable">stable</span>|
 |void|detachChild|Отсоединяет дочерний элемент `child` (принимает `const Element*`)|<span class="red-stable">unstable</span>|
-|void|setRect|Устанавливает позицию и размер контейнера|<span class="green-stable">stable</span>|
+|void|setRect|Устанавливает позицию и размер контейнера|<span class="red-stable">unstable</span>|
 |void|setPosition|Устанавливает позицию контейнера|<span class="green-stable">stable</span>|
 |void|setSize|Устанавливает размер контейнера|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать|<span class="green-stable">stable</span>|
+|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать|<span class="red-stable">unstable</span>|
 |void|control|Передаёт событие дочерним элементам|<span class="green-stable">stable</span>|
 |void|preload|Подготавливает ресурсы дочерних элементов для рендерера|<span class="yellow-stable">beta</span>|
-|void|draw|Рисует дочерние элементы через рендерер|<span class="green-stable">stable</span>|
-|Element*|hit|Возвращает верхний дочерний элемент, попавший в точку (x, y), или `nullptr`|<span class="green-stable">stable</span>|
+|void|draw|Рисует дочерние элементы через рендерер|<span class="yellow-stable">beta</span>|
+|Element*|hit|Возвращает верхний дочерний элемент, попавший в точку (x, y), или `nullptr`|<span class="yellow-stable">beta</span>|
 
 ## Защищённые методы
 
@@ -42,10 +42,10 @@
 |bool|isHit|Проверяет, реагирует ли элемент на попадание курсора|<span class="green-stable">stable</span>|
 |Position|getPosition|Возвращает позицию элемента|<span class="green-stable">stable</span>|
 |Size|getSize|Возвращает размер элемента|<span class="green-stable">stable</span>|
-|Rect|getRect|Возвращает прямоугольник элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="green-stable">stable</span>|
+|Rect|getRect|Возвращает прямоугольник элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Возвращает родительский элемент|<span class="yellow-stable">beta</span>|
 |void|attachTo|Прикрепляет элемент к родителю|<span class="red-stable">unstable</span>|
 |void|detach|Отсоединяет элемент от родителя|<span class="red-stable">unstable</span>|
@@ -54,6 +54,6 @@
 
 |Тип|Метод|Назначение|Метка|
 |---|-----|----------|-----|
-|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="green-stable">stable</span>|
-|Rect|rect|Прямоугольник элемента (поле)|<span class="green-stable">stable</span>|
-|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="green-stable">stable</span>|
+|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="yellow-stable">beta</span>|
+|Rect|rect|Прямоугольник элемента (поле)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="red-stable">unstable</span>|

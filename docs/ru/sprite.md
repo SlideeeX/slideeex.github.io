@@ -3,10 +3,10 @@
 
 ## Конструкторы
 
-* `Sprite()` - Базовый конструктор для создания спрайта
-* `Sprite(Rect rect)` - Конструктор для создания спрайта с заданным прямоугольником
-* `Sprite(Rect rect, Image& image)` - Конструктор для создания спрайта с заданным прямоугольником и изображением
-* `Sprite(Rect rect, Color color)` - Конструктор для создания спрайта с заданным прямоугольником и цветом
+* `Sprite()` - Базовый конструктор для создания спрайта <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect)` - Конструктор для создания спрайта с заданным прямоугольником <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect, Image& image)` - Конструктор для создания спрайта с заданным прямоугольником и изображением <span class="yellow-stable">beta</span>
+* `Sprite(Rect rect, Color color)` - Конструктор для создания спрайта с заданным прямоугольником и цветом <span class="yellow-stable">beta</span>
 
 ## Перечисление Mode - режимы заливки спрайта
 
@@ -25,21 +25,21 @@
 |void|setImageRect|Устанавливает область изображения, которая будет показана|<span class="green-stable">stable</span>|
 |void|setColor|Устанавливает цвет спрайта и переводит спрайт в режим `Color`. В режиме `Mashup` режим не меняется, а цвет окрашивает изображение|<span class="green-stable">stable</span>|
 |Color|getColor|Возвращает цвет спрайта|<span class="green-stable">stable</span>|
-|void|setRadius|Устанавливает радиус скругления углов|<span class="green-stable">stable</span>|
-|int|getRadius|Возвращает радиус скругления углов|<span class="green-stable">stable</span>|
-|void|setMode|Устанавливает режим заливки|<span class="green-stable">stable</span>|
-|Mode|getMode|Возвращает режим заливки|<span class="green-stable">stable</span>|
+|void|setRadius|Устанавливает радиус скругления углов|<span class="yellow-stable">beta</span>|
+|int|getRadius|Возвращает радиус скругления углов|<span class="yellow-stable">beta</span>|
+|void|setMode|Устанавливает режим заливки|<span class="yellow-stable">beta</span>|
+|Mode|getMode|Возвращает режим заливки|<span class="yellow-stable">beta</span>|
 |void|preload|Подготавливает ресурсы спрайта для рендерера|<span class="yellow-stable">beta</span>|
-|void|draw|Рисует спрайт через рендерер|<span class="green-stable">stable</span>|
-|Element*|hit|Возвращает элемент, попавший в точку (x, y)|<span class="green-stable">stable</span>|
+|void|draw|Рисует спрайт через рендерер|<span class="yellow-stable">beta</span>|
+|Element*|hit|Возвращает элемент, попавший в точку (x, y)|<span class="yellow-stable">beta</span>|
 
 ## Защищённые методы
 
 |Тип|Метод|Назначение|Метка|
 |---|-----|----------|-----|
-|std::vector<engine::Vertex>|geometry|Вершины геометрии спрайта (поле)|<span class="green-stable">stable</span>|
-|void|buildGeometry|Строит геометрию спрайта|<span class="green-stable">stable</span>|
-|void|buildRoundedGeometry|Строит геометрию спрайта со скруглёнными углами|<span class="green-stable">stable</span>|
+|std::vector<engine::Vertex>|geometry|Вершины геометрии спрайта (поле)|<span class="red-stable">unstable</span>|
+|void|buildGeometry|Строит геометрию спрайта|<span class="red-stable">unstable</span>|
+|void|buildRoundedGeometry|Строит геометрию спрайта со скруглёнными углами|<span class="red-stable">unstable</span>|
 |Rect|imageRect|Область изображения, которая будет показана (поле)|<span class="yellow-stable">beta</span>|
 |bool|calculateImageRect|Нужно ли пересчитать `imageRect` (поле, по умолчанию `true`)|<span class="yellow-stable">beta</span>|
 |static constexpr int|cornerSegments|Количество сегментов на одно скругление угла (поле, `4`)|<span class="red-stable">unstable</span>|
@@ -60,14 +60,14 @@
 |bool|isHit|Проверяет, реагирует ли элемент на попадание курсора|<span class="green-stable">stable</span>|
 |void|setPosition|Устанавливает позицию элемента (виртуальный)|<span class="green-stable">stable</span>|
 |void|setSize|Устанавливает размер элемента (виртуальный)|<span class="green-stable">stable</span>|
-|void|setRect|Устанавливает позицию и размер элемента (виртуальный)|<span class="green-stable">stable</span>|
+|void|setRect|Устанавливает позицию и размер элемента (виртуальный)|<span class="red-stable">unstable</span>|
 |Position|getPosition|Возвращает позицию элемента|<span class="green-stable">stable</span>|
 |Size|getSize|Возвращает размер элемента|<span class="green-stable">stable</span>|
-|Rect|getRect|Возвращает прямоугольник элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="green-stable">stable</span>|
-|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="green-stable">stable</span>|
-|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="green-stable">stable</span>|
-|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать (виртуальный)|<span class="green-stable">stable</span>|
+|Rect|getRect|Возвращает прямоугольник элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalRect|Возвращает прямоугольник элемента в глобальных координатах|<span class="red-stable">unstable</span>|
+|Rect|getVisibleRect|Возвращает видимую часть прямоугольника элемента|<span class="red-stable">unstable</span>|
+|Rect|getGlobalVisibleRect|Возвращает видимую часть прямоугольника в глобальных координатах|<span class="red-stable">unstable</span>|
+|Rect|collectDirtyRect|Возвращает область, которую нужно перерисовать (виртуальный)|<span class="red-stable">unstable</span>|
 |const Element*|getParent|Возвращает родительский элемент|<span class="yellow-stable">beta</span>|
 |void|control|Обрабатывает событие `Event` (виртуальный)|<span class="green-stable">stable</span>|
 |void|attachTo|Прикрепляет элемент к родителю|<span class="red-stable">unstable</span>|
@@ -78,6 +78,6 @@
 
 |Тип|Метод|Назначение|Метка|
 |---|-----|----------|-----|
-|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="green-stable">stable</span>|
-|Rect|rect|Прямоугольник элемента (поле)|<span class="green-stable">stable</span>|
-|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="green-stable">stable</span>|
+|void|unchange|Сбрасывает признак изменения и `oldRect` после отрисовки|<span class="yellow-stable">beta</span>|
+|Rect|rect|Прямоугольник элемента (поле)|<span class="red-stable">unstable</span>|
+|Rect|oldRect|Прямоугольник элемента до первого изменения (поле)|<span class="red-stable">unstable</span>|
